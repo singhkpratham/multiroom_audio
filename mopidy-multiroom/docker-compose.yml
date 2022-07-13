@@ -1,15 +1,15 @@
 mopidy:
-    image: "ivdata/mopidy"
+    image: "mopidy"
     ports:
         - "6680:6680"
         - "6600:6600"
     volumes:
         - fifo:/tmp/snapcast/
-        - ./music:/media/music
+        - /Users/pratham/Downloads/Music:/media/music
         - ./mopidydata:/mopidy
 
 snapserver:
-    image: "ivdata/snapserver"
+    image: "snapserver"
     ports:
         - "1704:1704"
         - "1705:1705"
